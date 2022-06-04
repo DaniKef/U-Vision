@@ -1,0 +1,55 @@
+  /*База*/
+html, body {
+  margin:0;
+  padding:0;
+  background: #232636;
+}
+A:visited {
+  color: #cacccb;
+}
+/*База*/
+
+/*ФОН*/
+.header-bg {
+ background: url(../Media/Images/U-VisionPicture.png) center repeat;
+ height: 100px;
+ width: 70%;
+ position: relative;
+ margin-left: auto;
+ margin-right: auto;
+  }
+/*ФОН*/
+
+
+  /*Главное*/
+main {
+  width: 70%;
+  height: auto;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  background: #304358;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+/*Главное*/
+
+/*Подвал*/
+footer {
+  width: 70%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  background: #426870;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  margin-top: -17px;
+}
+footer div {
+  padding: 5px;
+}
+footer p {
+  margin-left: 10px;
+  font-size: 17px;
+}
+/*Подвал*/
