@@ -4,22 +4,131 @@ html, body {
   padding:0;
   background: #232636;
 }
-A:visited {
-  color: #cacccb;
+a {
+  text-decoration: none;
 }
 /*База*/
 
+
+/*ХЭДЭР*/
+header {
+  width: 70%;
+  height: auto;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  background: #426870;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
 /*ФОН*/
 .header-bg {
- background: url(../Media/Images/U-VisionPicture.png) center repeat;
+ background: url(../Media/Images/U-VisionPicture1.png) center repeat;
  height: 100px;
- width: 70%;
- position: relative;
- margin-left: auto;
- margin-right: auto;
+ margin-top: 200px;
   }
 /*ФОН*/
-
+.nav {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  position: relative;
+  }
+.nav_links {
+  margin-left: 10%;
+  margin-top: auto;
+  margin-bottom: auto;
+  }
+.nav__link {
+  font-size: 30px;
+  display: inline-block;
+  margin: 0 20px;
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font-family: 'Playfair Display', serif;
+  transition: color .2s linear;
+}
+.nav__link::after{
+  content: "";
+  display: block;
+  width: 20%;
+  height: 1px;
+  opacity: 0;
+  background-color: #d1d44a;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  transition: opacity .2s linear;
+}
+.nav__link:hover{
+  color: #d1d44a;
+}
+.nav__link:hover::after, .nav__link.active::after {
+  opacity: 1;
+}
+.picure__href {
+  background: url(../Media/Images/U-VisionPicture.png) center repeat;
+  height: 100px;
+  margin-top: 200px;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+  }
+  .dropbtn {
+  margin-left: 15px;
+  margin-right: 15px;
+  background-color: #426870;
+  color: white;
+  font-size: 30px;
+  border: none;
+  font-family: 'Playfair Display', serif;
+  transition: color .2s linear;
+ }
+ .dropbtn:hover{
+  color: #d1d44a;
+ }
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown-content {
+  margin-left: 10px;
+  display: none;
+  width: auto;
+  position: absolute;
+  z-index: 1;
+  background-color: #426870;
+  }
+.to__link {
+  opacity: 1;
+  font-size: 20px;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: color .2s linear;
+  white-space: nowrap;
+  }
+.to__link:hover{
+  color: #d1d44a;
+}
+.to__link::after{
+  content: "";
+  display: block;
+  width: 20%;
+  height: 1px;
+  opacity: 0;
+  background-color: #d1d44a;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1;
+  transition: opacity .2s linear;
+}
+.to__link:hover::after, .to__link.active::after {
+  opacity: 1;
+}
+/*ХЭДЭР*/
 
   /*Главное*/
 main {
@@ -31,6 +140,25 @@ main {
   background: #304358;
   color: white;
   font-family: 'Roboto', sans-serif;
+  margin-top: -17px;
+}
+.mainContent {
+  width: 95%;
+  height: auto;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+.bigBegin {
+  color: #d1d44a;
+  font-size: 45px;
+  font-family: 'Bebas Neue', cursive;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.comments {
+  padding: 10px;
 }
 /*Главное*/
 

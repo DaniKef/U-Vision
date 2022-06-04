@@ -6,13 +6,13 @@
     <title>U-Vision</title>
     <meta name="author" content="Daniil Hur.">
     <meta name="description" content="U-Vision - это сайт для удобного просмотра фильмов и сериалов.">
-    <link rel="shortcut icon" type="image/x-icon" href="Media/Images/main_Icon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../Media/Images/main_Icon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="CSS/styleAll.css">
-    <link rel="stylesheet" type="text/css" href="CSS/styleMainPage.css">
+    <link rel="stylesheet" type="text/css" href="../../../CSS/styleAll.css">
+
   </head>
   <body>
 
@@ -20,7 +20,7 @@
       <a href="http://u-vision.zzz.com.ua/"><div class="header-bg"></div></a>
       <nav class="nav">
         <div class="nav_links">
-          <a class="nav__link" href="index.php">Главная</a>
+          <a class="nav__link" href="../../../index.php">Главная</a>
           <div class="dropdown">
             <button class="dropbtn">Фильмы</button>
               <div class="dropdown-content">
@@ -31,7 +31,7 @@
           <div class="dropdown">
             <button class="dropbtn">Сериалы</button>
               <div class="dropdown-content">
-                <a class="to__link" href="htmls/Serials/AllSerials/AllSerials.php">Все сериалы</a>
+                <a class="to__link" href="AllSerials.php">Все сериалы</a>
                 <a class="to__link" href="#">Что посмотреть</a>
               </div>
           </div>
@@ -48,9 +48,13 @@
 
     <main>
       <div class="mainContent">
-        <h3 class="bigBegin">Главная страница</h3>
+        <h3 class="bigBegin">Все Сериалы</h3>
+
+        <div class="inner">
+            <iframe src="https://voidboost.net/embed/464963" allow="autoplay" width="640" height="360" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" oallowfullscreen="" msallowfullscreen=""></iframe>
+        </div>
         <br><br><br><br><br><br><br>
-        <h3 class="bigBegin">Отзывы сайта:</h3>
+        <h3 class="bigBegin">Обсуждение:</h3>
       </div>
 
     <!--Комментарии-->
@@ -58,8 +62,8 @@
       <div id="disqus_thread"></div>
 <script>
     var disqus_config = function () {
-    this.page.url = 'http://u-vision.zzz.com.ua/';
-    this.page.identifier = '';
+    this.page.url = 'http://u-vision.zzz.com.ua/htmls/Serials/AllSerials/AllSerials.php';
+    this.page.identifier = '/htmls/Serials/AllSerials/AllSerials.php';
     };
     (function() {
     var d = document, s = d.createElement('script');
