@@ -1,3 +1,18 @@
+<?php
+require "SQL/ConnectionFactory.php"; // Подключение соединения с БД
+if (isset($_POST['SelectRU'])) // Пользователь выбирает язык и идет установка значения language для правильного выбора файла .ini
+{
+  $lang->setLanguage('ru-ru');
+  setcookie("lang", "ru");
+}
+if (isset($_POST['SelectUA']))
+{
+  $lang->setLanguage('uk-ua');
+  setcookie("lang", "uk");
+}
+
+ ?>
+
 <!DOCTYPE html>
 <html lang="ru" dir="ltr">
 
@@ -9,8 +24,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="Media/Images/main_Icon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="CSS/styleAll.css">
     <link rel="stylesheet" type="text/css" href="CSS/styleMainPage.css">
   </head>
@@ -20,37 +34,25 @@
       <a href="http://u-vision.zzz.com.ua/"><div class="header-bg"></div></a>
       <nav class="nav">
         <div class="nav_links">
-          <a class="nav__link" href="index.php">Главная</a>
-          <div class="dropdown">
-            <button class="dropbtn">Фильмы</button>
-              <div class="dropdown-content">
-                <a class="to__link" href="#">Все фильмы</a>
-                <a class="to__link" href="#">Что посмотреть</a>
-              </div>
-          </div>
-          <div class="dropdown">
-            <button class="dropbtn">Сериалы</button>
-              <div class="dropdown-content">
-                <a class="to__link" href="htmls/Serials/AllSerials/AllSerials.php">Все сериалы</a>
-                <a class="to__link" href="#">Что посмотреть</a>
-              </div>
-          </div>
-          <div class="dropdown">
-            <button class="dropbtn">Мультфильмы</button>
-              <div class="dropdown-content">
-                <a class="to__link" href="#">Все мультфильмы</a>
-                <a class="to__link" href="#">Что посмотреть</a>
-              </div>
-          </div>
+          <a class="nav__link" href="index.php"><?= $lang->get('BTN_MAIN');?></a>
+          <a class="nav__link" href="#"><?= $lang->get('BTN_FILMS');?></a>
+          <a class="nav__link" href="AllSerials.php"><?= $lang->get('BTN_SERIALS');?></a>
+          <a class="nav__link" href="#"><?= $lang->get('BTN_CARTOONS');?></a>
+        </div>
+        <div class="change_lang">
+          <form class="lang_form" action="" method="post">
+              <input class="lang_btn" type="submit" name="SelectUA" value="ua">
+              <input class="lang_btn" type="submit" name="SelectRU" value="ru">
+          </form>
         </div>
       </nav>
     </header>
 
     <main>
       <div class="mainContent">
-        <h3 class="bigBegin">Главная страница</h3>
+        <h3 class="bigBegin"><?= $lang->get('H3_TITLE_MAIN');?></h3>
         <br><br><br><br><br><br><br>
-        <h3 class="bigBegin">Отзывы сайта:</h3>
+        <h3 class="bigBegin"><?= $lang->get('MAIN_COMMENTS');?></h3>
       </div>
 
     <!--Комментарии-->

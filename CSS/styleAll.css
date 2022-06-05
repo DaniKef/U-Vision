@@ -3,9 +3,13 @@ html, body {
   margin:0;
   padding:0;
   background: #232636;
+  font-family: 'Playfair Display', serif;
 }
 a {
   text-decoration: none;
+}
+a:visited {
+  color: white;
 }
 /*База*/
 
@@ -19,7 +23,6 @@ header {
   margin-right: auto;
   background: #426870;
   color: white;
-  font-family: 'Roboto', sans-serif;
 }
 /*ФОН*/
 .header-bg {
@@ -33,6 +36,7 @@ header {
   height: 80px;
   display: flex;
   position: relative;
+  justify-content: space-between;
   }
 .nav_links {
   margin-left: 10%;
@@ -40,13 +44,12 @@ header {
   margin-bottom: auto;
   }
 .nav__link {
-  font-size: 30px;
+  font-size: 20px;
   display: inline-block;
   margin: 0 20px;
   position: relative;
   color: white;
   text-decoration: none;
-  font-family: 'Playfair Display', serif;
   transition: color .2s linear;
 }
 .nav__link::after{
@@ -68,7 +71,27 @@ header {
 .nav__link:hover::after, .nav__link.active::after {
   opacity: 1;
 }
-.picure__href {
+.change_lang {
+
+}
+.lang_form {
+  margin: 0 20px;
+  margin-top: 9%;
+}
+.lang_btn {
+  float: right;
+  cursor: pointer;
+  font-size: 20px;
+  color: #d1d1d1;
+  outline: none; /* Для синий ободки */
+  border: 0;
+  background: transparent;
+  transition: color .2s linear;
+}
+.lang_btn:hover {
+  color: #d45959;
+}
+/*.picure__href {
   background: url(../Media/Images/U-VisionPicture.png) center repeat;
   height: 100px;
   margin-top: 200px;
@@ -82,9 +105,8 @@ header {
   margin-right: 15px;
   background-color: #426870;
   color: white;
-  font-size: 30px;
+  font-size: 25px;
   border: none;
-  font-family: 'Playfair Display', serif;
   transition: color .2s linear;
  }
  .dropbtn:hover{
@@ -127,7 +149,8 @@ header {
 }
 .to__link:hover::after, .to__link.active::after {
   opacity: 1;
-}
+}*/
+
 /*ХЭДЭР*/
 
   /*Главное*/
@@ -139,7 +162,6 @@ main {
   margin-right: auto;
   background: #304358;
   color: white;
-  font-family: 'Roboto', sans-serif;
   margin-top: -17px;
 }
 .mainContent {
@@ -151,9 +173,8 @@ main {
 }
 .bigBegin {
   color: #d1d44a;
-  font-size: 45px;
-  font-family: 'Bebas Neue', cursive;
-  margin-top: 10px;
+  font-size: 30px;
+  padding-top: 20px;
   margin-left: 10px;
 }
 
@@ -170,7 +191,6 @@ footer {
   margin-right: auto;
   background: #426870;
   color: white;
-  font-family: 'Roboto', sans-serif;
   margin-top: -17px;
 }
 footer div {
@@ -178,6 +198,6 @@ footer div {
 }
 footer p {
   margin-left: 10px;
-  font-size: 17px;
+  font-size: 14px;
 }
 /*Подвал*/
