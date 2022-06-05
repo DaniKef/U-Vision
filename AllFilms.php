@@ -50,7 +50,7 @@ if (isset($_POST['SelectUA']))
 
     <main>
       <div class="mainContent">
-        <h3 class="bigBegin"><?= $lang->get('H3_TITLE_SERIALS');?></h3>
+        <h3 class="bigBegin"><?= $lang->get('H3_TITLE_FILMS');?></h3>
 
         <div class="inner">
             <iframe src="https://voidboost.net/embed/464963" allow="autoplay" width="640" height="360" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" oallowfullscreen="" msallowfullscreen=""></iframe>

@@ -35,9 +35,9 @@ if (isset($_POST['SelectUA']))
       <nav class="nav">
         <div class="nav_links">
           <a class="nav__link" href="index.php"><?= $lang->get('BTN_MAIN');?></a>
-          <a class="nav__link" href="#"><?= $lang->get('BTN_FILMS');?></a>
+          <a class="nav__link" href="AllFilms.php"><?= $lang->get('BTN_FILMS');?></a>
           <a class="nav__link" href="AllSerials.php"><?= $lang->get('BTN_SERIALS');?></a>
-          <a class="nav__link" href="#"><?= $lang->get('BTN_CARTOONS');?></a>
+          <a class="nav__link" href="AllCartoons.php"><?= $lang->get('BTN_CARTOONS');?></a>
         </div>
         <div class="change_lang">
           <form class="lang_form" action="" method="post">
