@@ -1,16 +1,6 @@
 <?php
 require "SQL/ConnectionFactory.php"; // Подключение соединения с БД
-if (isset($_POST['SelectRU'])) // Пользователь выбирает язык и идет установка значения language для правильного выбора файла .ini
-{
-  $lang->setLanguage('ru-ru');
-  setcookie("lang", "ru");
-}
-if (isset($_POST['SelectUA']))
-{
-  $lang->setLanguage('uk-ua');
-  setcookie("lang", "uk");
-}
-
+require "php/changeLanguageCoockie.php"; // Проверка при 1 запуске сайта и смена языка
  ?>
 
 <!DOCTYPE html>

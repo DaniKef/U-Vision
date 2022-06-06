@@ -12,12 +12,5 @@ try {
     $dbh = new PDO($dsn, $user, $pass, $options);
 } catch (PDOException $ex) { }
 
-if (!isset($_COOKIE['lang'])) // Если пользователь заходит 1 раз на сайт, то устанавливается язык его Браузера
-{
-  $lang = new Language(getLanguage());
-}
-else
-{
-  $lang = new Language($_COOKIE["lang"]);
-}
+
  ?>
