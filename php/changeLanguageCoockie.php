@@ -12,11 +12,12 @@ if (isset($_POST['SelectRU'])) // Пользователь выбирает яз
 {
   $lang->setLanguage('ru-ru');
   setcookie("lang", "ru");
+  header("Refresh: 0");
 }
 if (isset($_POST['SelectUA']))
 {
   $lang->setLanguage('uk-ua');
   setcookie("lang", "uk");
+  header("Refresh: 0");
 }
-
  ?>

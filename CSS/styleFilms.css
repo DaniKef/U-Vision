@@ -1,0 +1,58 @@
+.pre-film {
+  margin-bottom: 10px;
+}
+
+/*Название мини отдела*/
+.pre-film-name {
+  background: #d1d44a;
+  justify-content: space-between;
+  display: flex;
+  position: relative;
+  height: 60px;
+}
+.pre-film-name h6 {
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 20px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.pre-film-name nav {
+  display: flex;
+}
+.pre-film-name nav div {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.pre-film-name p {
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 20px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.pre-film-name img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+/*Название мини отдела*/
+
+/*Контент*/
+.pre-film-content {
+  background: #2a394a;
+}
+.pre-film-content nav {
+  padding: 10px;
+  display: flex;
+  position: relative;
+}
+.pre-film-short-info {
+  margin-left: 20px;
+}
+.pre-film-short-info p {
+  font-size: 17px;
+}
+/*Контент*/

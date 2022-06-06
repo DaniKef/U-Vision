@@ -1,6 +1,9 @@
 <?php
 require "SQL/ConnectionFactory.php"; // Подключение соединения с БД
 require "php/changeLanguageCoockie.php"; // Проверка при 1 запуске сайта и смена языка
+require "SQL/requests.php"; // SQL запросы
+require "SQL/SQL_SELECT_ALL_FILMS.php";
+require "SQL/SHOW_RESULT_FILMS.php";
  ?>
 
 <!DOCTYPE html>
@@ -16,7 +19,7 @@ require "php/changeLanguageCoockie.php"; // Проверка при 1 запус
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="CSS/styleAll.css">
-
+    <link rel="stylesheet" type="text/css" href="CSS/styleFilms.css">
   </head>
   <body>
 
@@ -41,8 +44,9 @@ require "php/changeLanguageCoockie.php"; // Проверка при 1 запус
     <main>
       <div class="mainContent">
         <h3 class="bigBegin"><?= $lang->get('H3_TITLE_FILMS');?></h3>
-
-        <br><br><br><br><br><br><br>
+        <div class="pre-films">
+            <?php ShowAllFilms(SelectAllFilms($dbh),$lang); ?>
+        </div>
         <h3 class="bigBegin"><?= $lang->get('DISCUSSION');?></h3>
       </div>
 

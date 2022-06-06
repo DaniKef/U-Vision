@@ -11,6 +11,4 @@ $options = array(
 try {
     $dbh = new PDO($dsn, $user, $pass, $options);
 } catch (PDOException $ex) { }
-
-
  ?>
