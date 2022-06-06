@@ -20,7 +20,11 @@ if (isset($_POST['SelectUA']))
     <meta charset="utf-8">
     <title>U-Vision</title>
     <meta name="author" content="Daniil Hur.">
-    <meta name="description" content="U-Vision - это сайт для удобного просмотра фильмов и сериалов.">
+    <meta name="description" content="U-Vision - Это сайт для удобного просмотра фильмов и сериалов.">
+    <meta property="og:title" content="U-Vision - Самый лучший бесплатный сайт для просмотра фильмов и сериалов.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://u-vision.zzz.com.ua/">
+    <meta property="og:description" content="U-Vision - Это сайт для удобного просмотра фильмов и сериалов.">
     <link rel="shortcut icon" type="image/x-icon" href="Media/Images/main_Icon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
