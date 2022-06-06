@@ -55,7 +55,7 @@ header {
 .nav__link::after{
   content: "";
   display: block;
-  width: 20%;
+  width: 80%;
   height: 1px;
   opacity: 0;
   background-color: #d1d44a;

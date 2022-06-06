@@ -20,6 +20,21 @@ require "SQL/SHOW_RESULT_FILMS.php";
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="CSS/styleAll.css">
     <link rel="stylesheet" type="text/css" href="CSS/styleFilms.css">
+    <script type="text/javascript">
+
+var elem = document.querySelectorAll( 'a' ); // Выбираем все ссылки на странице
+//var result = document.getElementById( 'result' ); // input, куда выводим результат
+alert(elem);
+alert(elem.value);
+alert(elem[0]);
+alert(elem[0].value);
+/*for ( var i = 0; i < elem.length; i++ ) { // пробегаемся по всем найденным ссылкам
+  elem[i].addEventListener( 'click',(function (e){ // действие при клике
+      e.preventDefault(); // Отменяем переход по ссылке
+    result.value = this.innerHTML; // вставляем содержимое ссылки в инпут
+}));
+}*/
+    </script>
   </head>
   <body>
 
@@ -47,6 +62,8 @@ require "SQL/SHOW_RESULT_FILMS.php";
         <div class="pre-films">
             <?php ShowAllFilms(SelectAllFilms($dbh),$lang); ?>
         </div>
+        <a href="#">Ссылка 1</a> <a href="#">Ссылка 2</a>
+        <input type="text" id="result" />
         <h3 class="bigBegin"><?= $lang->get('DISCUSSION');?></h3>
       </div>
 

@@ -10,7 +10,7 @@ function ShowAllFilms($data,$lang)
 
   foreach ($data as $d)
   {
-    echo "<a href = 'http://u-vision.zzz.com.ua/'>";
+    echo "<a href = '#' class = 'linkToWatch'>";
     echo "<div class='pre-film'>";
 
     echo "<nav class='pre-film-name'>";
