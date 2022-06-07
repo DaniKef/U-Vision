@@ -1,0 +1,30 @@
+.film-content {
+  background: #2a394a;
+}
+.film-content nav {
+    padding: 10px;
+    display: flex;
+    position: relative;
+}
+.film-info {
+  margin-left: 15%;
+  font-size: 16px;
+  margin-top: 18px;
+}
+
+.film-description {
+  background: #2a394a;
+  margin-top: 20px;
+  font-size: 16px;
+}
+.film-description p {
+  padding: 15px;
+  margin-left: 10px;
+}
+
+.inner {
+  margin-bottom: -170px;
+}
+.player-holder {
+  text-align: center;
+}

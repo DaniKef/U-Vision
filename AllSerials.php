@@ -16,7 +16,9 @@ require "php/changeLanguageCoockie.php"; // Проверка при 1 запус
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="CSS/styleAll.css">
-
+    <script type="text/javascript">
+    document.cookie = "whatToPlay=serial";
+    </script>
   </head>
   <body>
 

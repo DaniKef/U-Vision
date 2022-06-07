@@ -22,7 +22,7 @@ require "php/WatchPlayer.php";
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="CSS/styleAll.css">
-    <link rel="stylesheet" type="text/css" href="CSS/styleMainPage.css">
+    <link rel="stylesheet" type="text/css" href="CSS/styleWatch.css">
   </head>
   <body>
 
@@ -47,7 +47,7 @@ require "php/WatchPlayer.php";
     <main>
       <div class="mainContent">
         <?php LoadSite($lang,$dbh); ?>
-        <h3 class="bigBegin"><?= $lang->get('MAIN_COMMENTS');?></h3>
+        <h3 class="bigBegin"><?= $lang->get('DISCUSSION');?></h3>
       </div>
 
     <!--Комментарии-->

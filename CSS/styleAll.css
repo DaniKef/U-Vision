@@ -55,7 +55,7 @@ header {
 .nav__link::after{
   content: "";
   display: block;
-  width: 80%;
+  width: 90%;
   height: 1px;
   opacity: 0;
   background-color: #d1d44a;
@@ -177,7 +177,13 @@ main {
   padding-top: 20px;
   margin-left: 10px;
 }
-
+.pleasant-viewing {
+  margin-top: 15px;
+}
+.pleasant-viewing h3 {
+  font-size: 30px;
+  margin-left: 10px;
+}
 .comments {
   padding: 10px;
 }

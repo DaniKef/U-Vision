@@ -21,7 +21,9 @@ require "SQL/SHOW_RESULT_FILMS.php";
     <link rel="stylesheet" type="text/css" href="CSS/styleAll.css">
     <link rel="stylesheet" type="text/css" href="CSS/styleFilms.css">
     <script type="text/javascript">
-    document.addEventListener('click',e => document.cookie = "toPlayName="+e.target.textContent, document.cookie = "whatToPlay=film")
+    document.addEventListener('click',e => document.cookie = "toPlayNameRU="+e.target.textContent);
+    document.addEventListener('click',e => document.cookie = "toPlayNameUA="+e.target.textContent);
+    document.cookie = "whatToPlay=film";
     </script>
   </head>
   <body>
