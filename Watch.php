@@ -1,6 +1,8 @@
 <?php
 require "SQL/ConnectionFactory.php"; // Подключение соединения с БД
 require "php/changeLanguageCoockie.php"; // Проверка при 1 запуске сайта и смена языка
+require "SQL/requests.php"; // SQL запросы
+require "php/WatchPlayer.php";
  ?>
 
 <!DOCTYPE html>
@@ -44,8 +46,7 @@ require "php/changeLanguageCoockie.php"; // Проверка при 1 запус
 
     <main>
       <div class="mainContent">
-        <h3 class="bigBegin"><?= $lang->get('H3_TITLE_MAIN');?></h3>
-        <p class="main_text"></p>
+        <?php LoadSite($lang,$dbh); ?>
         <h3 class="bigBegin"><?= $lang->get('MAIN_COMMENTS');?></h3>
       </div>
 
@@ -54,8 +55,8 @@ require "php/changeLanguageCoockie.php"; // Проверка при 1 запус
       <div id="disqus_thread"></div>
 <script>
     var disqus_config = function () {
-    this.page.url = 'http://u-vision.zzz.com.ua/';
-    this.page.identifier = '';
+    this.page.url = 'http://u-vision.zzz.com.ua/htmls/Serials/AllSerials/AllSerials.php';
+    this.page.identifier = '/htmls/Serials/AllSerials/AllSerials.php';
     };
     (function() {
     var d = document, s = d.createElement('script');

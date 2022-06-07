@@ -10,12 +10,13 @@ function ShowAllFilms($data,$lang)
 
   foreach ($data as $d)
   {
-    echo "<a href = '#' class = 'linkToWatch'>";
     echo "<div class='pre-film'>";
 
     echo "<nav class='pre-film-name'>";
     echo "<nav>";
+    echo "<a href = 'Watch.php' class = 'linkToWatch'>";
     echo "<h6>" . $d['name'] . "</h6>";
+    echo "</a>";
     echo "</nav>";
     echo "<nav>";
     echo "<div>";
@@ -47,7 +48,6 @@ function ShowAllFilms($data,$lang)
     echo "</div>";
 
     echo "</div>";
-    echo "</a>";
   }
 }
  ?>
