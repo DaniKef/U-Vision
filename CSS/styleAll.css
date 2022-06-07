@@ -30,6 +30,11 @@ header {
  height: 100px;
  margin-top: 200px;
   }
+.header-bg1 {
+ background: url(../Media/Images/U-VisionPicture2.png) center repeat;
+ height: 100px;
+ margin-top: 200px;
+  }
 /*ФОН*/
 .nav {
   width: 100%;

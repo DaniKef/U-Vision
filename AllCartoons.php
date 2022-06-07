@@ -1,6 +1,9 @@
 <?php
 require "SQL/ConnectionFactory.php"; // Подключение соединения с БД
 require "php/changeLanguageCoockie.php"; // Проверка при 1 запуске сайта и смена языка
+require "SQL/requests.php"; // SQL запросы
+require "SQL/SQL_SELECT_ALL_CARTOONS.php";
+require "SQL/SHOW_RESULT_FILMS.php";
  ?>
 
 <!DOCTYPE html>
@@ -16,7 +19,10 @@ require "php/changeLanguageCoockie.php"; // Проверка при 1 запус
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="CSS/styleAll.css">
+    <link rel="stylesheet" type="text/css" href="CSS/styleFilms.css">
     <script type="text/javascript">
+    document.addEventListener('click',e => document.cookie = "toPlayNameRU="+e.target.textContent);
+    document.addEventListener('click',e => document.cookie = "toPlayNameUA="+e.target.textContent);
     document.cookie = "whatToPlay=cartoon";
     </script>
   </head>
@@ -43,8 +49,9 @@ require "php/changeLanguageCoockie.php"; // Проверка при 1 запус
     <main>
       <div class="mainContent">
         <h3 class="bigBegin"><?= $lang->get('H3_TITLE_CARTOONS');?></h3>
-
-        <br><br><br><br><br><br><br>
+        <div class="pre-films">
+            <?php ShowAllFilms(SelectAllCartoons($dbh),$lang); ?>
+        </div>
         <h3 class="bigBegin"><?= $lang->get('DISCUSSION');?></h3>
       </div>
 
