@@ -4,6 +4,11 @@ require "php/changeLanguageCoockie.php"; // Проверка при 1 запус
 require "php/pLoadHeader.php"; // Загрузка хэдэра
 require "php/pLoadFooter.php"; // Загрузка футэра
 require "php/pLoadComments.php"; // Загрузка комментариев
+session_start();
+if(!$_SESSION['user'])
+{
+  header('Location: http://u-vision.zzz.com.ua/Authorization.php');
+}
  ?>
 
 <!DOCTYPE html>
@@ -23,7 +28,7 @@ require "php/pLoadComments.php"; // Загрузка комментариев
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="CSS/styleAll.css">
-    <link rel="stylesheet" type="text/css" href="CSS/styleMainPage.css">
+    <link rel="stylesheet" type="text/css" href="CSS/RegistrationAndProfileStyle.css">
   </head>
   <body>
 
@@ -33,14 +38,15 @@ require "php/pLoadComments.php"; // Загрузка комментариев
 
     <main>
       <div class="mainContent">
-        <h3 class="bigBegin"><?= $lang->get('H3_TITLE_MAIN');?></h3>
-        <p class="main_text"></p>
-        <h3 class="bigBegin"><?= $lang->get('MAIN_COMMENTS');?></h3>
+          <h3 class="bigBegin"><?= $lang->get('H3_ACCOUNT');?></h3>
+          <div class="divProfile">
+            <p><?= $lang->get('P_NAME');?> : <?=$_SESSION['user']['name']?></p>
+            <p><?= $lang->get('P_LOGIN');?> : <?=$_SESSION['user']['login']?></p>
+            <div class="btn_LogOut">
+              <p><a href="php/logOut.php"><?= $lang->get('BTN_LOGOUT');?></a></p>
+            </div>
+          </div>
       </div>
-
-  <!--Комментарии-->
-    <?php LoadCommentsMainPage(); ?>
-  <!--Комментарии-->
     </main>
 
     <footer>

@@ -7,9 +7,15 @@ html, body {
 }
 a {
   text-decoration: none;
+  color: #d1d44a;
 }
 a:visited {
   color: white;
+}
+
+a:hover
+{
+  color: #d1d44a;
 }
 /*База*/
 
@@ -75,6 +81,17 @@ header {
 }
 .nav__link:hover::after, .nav__link.active::after {
   opacity: 1;
+}
+.header-account {
+  margin-top: 11px;
+  background: #2f4c52;
+}
+.header-account-a {
+  padding: 10px;
+  margin-top: -2px;
+}
+.header-account-a a:hover {
+  color: #d1d44a;
 }
 .change_lang {
 

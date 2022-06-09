@@ -47,4 +47,8 @@ const SQL_SELECT_CARTOON_RU_NAME_BY_CARTOON_UA_NAME = "SELECT a.name
                                                 FROM cartoonsRU AS a
                                                 INNER JOIN cartoonsUA AS b ON a.picture = b.picture
                                                 WHERE b.name = ?;";
+//////////////
+const SQL_INSERT_USER = "INSERT INTO users(id, name, login, password) VALUES (NULL, ?, ?, ?);";
+const SQL_SIGN_IN_USER = "SELECT * FROM users WHERE login = ? AND password = ?;";
+const SQL_FIND_PERSON_THIS_LOGIN = "SELECT * FROM users WHERE login = ?;";
  ?>

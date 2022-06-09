@@ -4,6 +4,11 @@ require "php/changeLanguageCoockie.php"; // Проверка при 1 запус
 require "php/pLoadHeader.php"; // Загрузка хэдэра
 require "php/pLoadFooter.php"; // Загрузка футэра
 require "php/pLoadComments.php"; // Загрузка комментариев
+session_start();
+if($_SESSION['user'])
+{
+  header('Location: http://u-vision.zzz.com.ua/Profile.php');
+}
  ?>
 
 <!DOCTYPE html>
@@ -23,7 +28,7 @@ require "php/pLoadComments.php"; // Загрузка комментариев
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="CSS/styleAll.css">
-    <link rel="stylesheet" type="text/css" href="CSS/styleMainPage.css">
+    <link rel="stylesheet" type="text/css" href="CSS/RegistrationAndProfileStyle.css">
   </head>
   <body>
 
@@ -33,14 +38,24 @@ require "php/pLoadComments.php"; // Загрузка комментариев
 
     <main>
       <div class="mainContent">
-        <h3 class="bigBegin"><?= $lang->get('H3_TITLE_MAIN');?></h3>
-        <p class="main_text"></p>
-        <h3 class="bigBegin"><?= $lang->get('MAIN_COMMENTS');?></h3>
+        <div class="divForm">
+          <form class="formProfile" action="AuthorizationSignIn.php" method="post">
+            <p><?= $lang->get('P_LOGIN');?></p>
+            <input type="text" name="login" placeholder="Input your login">
+            <p><?= $lang->get('P_PASSWORD');?></p>
+            <input type="password" name="password" placeholder="Input your password">
+            <div class="registration-btn">
+                <button type="submit"><?= $lang->get('BTN_LOGIN');?></button>
+            </div>
+            <p style="text-align: center;"><?= $lang->get('IS_LOGIN');?>? - <a href="Registration.php"><?= $lang->get('SO_REGISTER');?>!</a></p>
+            <?php
+            if($_SESSION['message1'])
+            {echo "<p class='msg' style='color: #d1d44a;'>" . $_SESSION['message1'] . "</p>";}
+            unset($_SESSION['message1']);
+            ?>
+          </form>
+        </div>
       </div>
-
-  <!--Комментарии-->
-    <?php LoadCommentsMainPage(); ?>
-  <!--Комментарии-->
     </main>
 
     <footer>
