@@ -6,6 +6,8 @@ require "php/pLoadFooter.php"; // Загрузка футэра
 require "php/pLoadComments.php"; // Загрузка комментариев
 require "SQL/requests.php"; // SQL запросы
 require "php/WatchPlayer.php";
+require "checkWatchedBest.php";
+session_start();
  ?>
 
 <!DOCTYPE html>

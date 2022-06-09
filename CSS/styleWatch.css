@@ -1,3 +1,29 @@
+.film-panel {
+  display: flex;
+  justify-content: space-between;
+}
+.addToProfBtn1 {
+  background: transparent;
+  border: none;
+  color: #d1d44a;
+  font-family: 'Playfair Display', serif;
+  font-size: 14px;
+}
+.addToProfBtn1:hover {
+  color: white;
+}
+
+.addToProfBtn2 {
+  background: transparent;
+  border: none;
+  color: #d1d44a;
+  font-family: 'Playfair Display', serif;
+  font-size: 14px;
+}
+.addToProfBtn2:hover {
+  color: white;
+}
+
 .film-content {
   background: #2a394a;
 }

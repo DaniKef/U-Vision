@@ -18,11 +18,29 @@ function LoadSite($lang,$dbh) // Загружает содержимое стр�
   foreach ($data as $d)
   {
     echo "<h3 class='bigBegin'>" . $d['name'] . "</h3>";
+    //echo "<p>" . $_COOKIE['toPlayNameRU'] . "</p>";
+    //echo "<p>" . $_COOKIE['toPlayNameUA'] . "</p>";
     echo "<div class='film-content'>";
 
     echo "<nav>";
     echo "<div class='film-picture'>";
     echo "<img src = '../Media/Images/Films/" . $d['picture'] . "' alt = 'Film picture'>";
+    echo "<nav class='film-panel'>";
+    echo "<div>";
+    echo "<form action='addToWatchedBest.php' method='post'>
+    <button type='submit' name='WatchedBtn' class='addToProfBtn1'>Просмотрено</button>
+    </form>";
+    echo "</div>";
+    echo "<div>";
+    echo "<form action='addToWatchedBest.php' method='post'>
+    <button type='submit' name='BestBtn' class='addToProfBtn2'>Избранное</button>
+    </form>";
+    echo "</div>";
+    echo "</nav>";
+
+    if($_SESSION['messageAboutAdd'])
+    {echo "<p style='color: #d1d44a;'>" . $_SESSION['messageAboutAdd'] . "</p>";}
+    unset($_SESSION['messageAboutAdd']);
     echo "</div>";
 
     echo "<div class='film-info'>";

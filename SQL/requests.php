@@ -51,4 +51,10 @@ const SQL_SELECT_CARTOON_RU_NAME_BY_CARTOON_UA_NAME = "SELECT a.name
 const SQL_INSERT_USER = "INSERT INTO users(id, name, login, password) VALUES (NULL, ?, ?, ?);";
 const SQL_SIGN_IN_USER = "SELECT * FROM users WHERE login = ? AND password = ?;";
 const SQL_FIND_PERSON_THIS_LOGIN = "SELECT * FROM users WHERE login = ?;";
+/////////////////
+
+const SQL_INSERT_TO_WATCHED = "INSERT INTO userWatched(login,nameRU,nameUA,category) VALUES(?,?,?,?);";
+const SQL_INSERT_TO_BEST = "INSERT INTO userBest(login,nameRU,nameUA,category) VALUES(?,?,?,?);";
+const SQL_SELECT_FROM_WATCHED = "SELECT * FROM userWatched WHERE nameRU = ? OR nameUA=?;";
+const SQL_SELECT_FROM_BEST = "SELECT * FROM userBest WHERE nameRU = ? OR nameUA=?;";
  ?>
