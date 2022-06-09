@@ -9,6 +9,13 @@
   font-family: 'Playfair Display', serif;
   font-size: 14px;
 }
+.addToProfBtn1_1 {
+  background: #d1d44a;
+  border: none;
+  color: black;
+  font-family: 'Playfair Display', serif;
+  font-size: 14px;
+}
 .addToProfBtn1:hover {
   color: white;
 }
@@ -17,6 +24,13 @@
   background: transparent;
   border: none;
   color: #d1d44a;
+  font-family: 'Playfair Display', serif;
+  font-size: 14px;
+}
+.addToProfBtn2_1 {
+  background: #d1d44a;
+  border: none;
+  color: black;
   font-family: 'Playfair Display', serif;
   font-size: 14px;
 }

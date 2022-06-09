@@ -1,4 +1,6 @@
 <?php
+session_start();
+require "checkWatchedBest.php";
 function LoadSite($lang,$dbh) // Загружает содержимое страницы для просмотра
 {
 
@@ -27,14 +29,30 @@ function LoadSite($lang,$dbh) // Загружает содержимое стр�
     echo "<img src = '../Media/Images/Films/" . $d['picture'] . "' alt = 'Film picture'>";
     echo "<nav class='film-panel'>";
     echo "<div>";
-    echo "<form action='addToWatchedBest.php' method='post'>
-    <button type='submit' name='WatchedBtn' class='addToProfBtn1'>Просмотрено</button>
-    </form>";
+    echo "<form action='addToWatchedBest.php' method='post'>";
+    if($_SESSION['user'])
+    {
+      if(SelectWatched($dbh))
+      echo "<button type='submit' name='WatchedBtn' class='addToProfBtn1_1'>Просмотрено</button>";
+      else
+      echo "<button type='submit' name='WatchedBtn' class='addToProfBtn1'>Просмотрено</button>";
+    }
+    else
+    echo "<button type='submit' name='WatchedBtn' class='addToProfBtn1'>Просмотрено</button>";
+    echo "</form>";
     echo "</div>";
     echo "<div>";
-    echo "<form action='addToWatchedBest.php' method='post'>
-    <button type='submit' name='BestBtn' class='addToProfBtn2'>Избранное</button>
-    </form>";
+    echo "<form action='addToWatchedBest.php' method='post'>";
+    if($_SESSION['user'])
+    {
+      if(SelectBest($dbh))
+      echo "<button type='submit' name='BestBtn' class='addToProfBtn2_1'>Избранное</button>";
+      else
+      echo "<button type='submit' name='BestBtn' class='addToProfBtn2'>Избранное</button>";
+    }
+    else
+    echo "<button type='submit' name='BestBtn' class='addToProfBtn2'>Избранное</button>";  
+    echo"</form>";
     echo "</div>";
     echo "</nav>";
 

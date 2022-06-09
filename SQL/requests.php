@@ -55,6 +55,6 @@ const SQL_FIND_PERSON_THIS_LOGIN = "SELECT * FROM users WHERE login = ?;";
 
 const SQL_INSERT_TO_WATCHED = "INSERT INTO userWatched(login,nameRU,nameUA,category) VALUES(?,?,?,?);";
 const SQL_INSERT_TO_BEST = "INSERT INTO userBest(login,nameRU,nameUA,category) VALUES(?,?,?,?);";
-const SQL_SELECT_FROM_WATCHED = "SELECT * FROM userWatched WHERE nameRU = ? OR nameUA=?;";
-const SQL_SELECT_FROM_BEST = "SELECT * FROM userBest WHERE nameRU = ? OR nameUA=?;";
+const SQL_SELECT_FROM_WATCHED = "SELECT * FROM userWatched WHERE (nameRU = ? OR nameUA=?) AND login=?;";
+const SQL_SELECT_FROM_BEST = "SELECT * FROM userBest WHERE (nameRU = ? OR nameUA=?) AND login=?;";
  ?>
