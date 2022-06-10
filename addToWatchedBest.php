@@ -5,13 +5,18 @@ require "SQL/ConnectionFactory.php"; // Подключение соединен�
 
 if($_SESSION['user'])
 {
-
 if (isset($_POST['WatchedBtn']))
 {
+  if(SelectWatched($dbh))
+  DeleteWatched($dbh);
+  else
   InsertWatched($dbh);
 }
 if (isset($_POST['BestBtn']))
 {
+  if(SelectBest($dbh))
+  DeleteBest($dbh);
+  else
   InsertBest($dbh);
 }
 header('Location: http://u-vision.zzz.com.ua/Watch.php');
@@ -283,6 +288,65 @@ function InsertCByKnowingRUB($dbh)
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function DeleteWatched($dbh)
+{
+  $sth = $dbh->prepare(SQL_DELETE_FROM_WATCHED);
+  $sth->execute([$_SESSION['user']['login'], $_COOKIE['toPlayNameRU'], $_COOKIE['toPlayNameUA']]);
+}
+function DeleteBest($dbh)
+{
+  $sth = $dbh->prepare(SQL_DELETE_FROM_BEST);
+  $sth->execute([$_SESSION['user']['login'], $_COOKIE['toPlayNameRU'], $_COOKIE['toPlayNameUA']]);
+}
+
+
+
+function SelectWatched($dbh)
+{
+  $sth = $dbh->prepare(SQL_SELECT_FROM_WATCHED);
+  $sth->execute([$_COOKIE['toPlayNameRU'], $_COOKIE['toPlayNameUA'], $_SESSION['user']['login']]);
+  $data = $sth->fetchAll();
+  if(count($data) > 0)
+  {
+    return true;
+  }
+  else {
+    return false;
+  }
+}
+
+function SelectBest($dbh)
+{
+  $sth = $dbh->prepare(SQL_SELECT_FROM_BEST);
+  $sth->execute([$_COOKIE['toPlayNameRU'], $_COOKIE['toPlayNameUA'], $_SESSION['user']['login']]);
+  $data = $sth->fetchAll();
+  if(count($data) > 0)
+  {
+    return true;
+  }
+  else {
+    return false;
+  }
+}
 
 
  ?>

@@ -16,3 +16,20 @@
 .btn_LogOut {
   margin-top: 80px;
 }
+
+.navWatchedBest {
+  display: flex;
+  position: relative;
+}
+.btnGetWatchedBest
+{
+  background: transparent;
+  border: none;
+  color: #d1d44a;
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+}
+.btnGetWatchedBest:hover {
+  background: #d1d44a;
+  color: black;
+}

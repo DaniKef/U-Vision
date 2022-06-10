@@ -8,7 +8,7 @@
   justify-content: space-between;
   display: flex;
   position: relative;
-  height: 60px;
+  height: auto;
 }
 .pre-film-name h6 {
   color: black;
@@ -17,7 +17,6 @@
   margin-left: 20px;
   margin-top: auto;
   margin-bottom: auto;
-  margin-top: 10px;
 }
 .pre-film-name nav {
   display: flex;

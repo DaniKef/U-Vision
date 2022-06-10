@@ -16,12 +16,12 @@ function LoadSite($lang,$dbh) // Загружает содержимое стр�
   $h3_pleasent_view1 = $lang->get('H3_PLEASENT_VIEW1');
   $h3_pleasent_view2 = $lang->get('H3_PLEASENT_VIEW2');
   $h3_pleasent_view = $h3_pleasent_view1 . " " . $h3_pleasent_view2;
+  $btn_watched = $lang->get('BTN_WATCHED');
+  $btn_best = $lang->get('BTN_BEST');
 
   foreach ($data as $d)
   {
     echo "<h3 class='bigBegin'>" . $d['name'] . "</h3>";
-    //echo "<p>" . $_COOKIE['toPlayNameRU'] . "</p>";
-    //echo "<p>" . $_COOKIE['toPlayNameUA'] . "</p>";
     echo "<div class='film-content'>";
 
     echo "<nav>";
@@ -33,12 +33,12 @@ function LoadSite($lang,$dbh) // Загружает содержимое стр�
     if($_SESSION['user'])
     {
       if(SelectWatched($dbh))
-      echo "<button type='submit' name='WatchedBtn' class='addToProfBtn1_1'>Просмотрено</button>";
+      echo "<button type='submit' name='WatchedBtn' class='addToProfBtn1_1'>" . $btn_watched . "</button>";
       else
-      echo "<button type='submit' name='WatchedBtn' class='addToProfBtn1'>Просмотрено</button>";
+      echo "<button type='submit' name='WatchedBtn' class='addToProfBtn1'>" . $btn_watched . "</button>";
     }
     else
-    echo "<button type='submit' name='WatchedBtn' class='addToProfBtn1'>Просмотрено</button>";
+    echo "<button type='submit' name='WatchedBtn' class='addToProfBtn1'>" . $btn_watched . "</button>";
     echo "</form>";
     echo "</div>";
     echo "<div>";
@@ -46,12 +46,12 @@ function LoadSite($lang,$dbh) // Загружает содержимое стр�
     if($_SESSION['user'])
     {
       if(SelectBest($dbh))
-      echo "<button type='submit' name='BestBtn' class='addToProfBtn2_1'>Избранное</button>";
+      echo "<button type='submit' name='BestBtn' class='addToProfBtn2_1'>" . $btn_best . "</button>";
       else
-      echo "<button type='submit' name='BestBtn' class='addToProfBtn2'>Избранное</button>";
+      echo "<button type='submit' name='BestBtn' class='addToProfBtn2'>" . $btn_best . "</button>";
     }
     else
-    echo "<button type='submit' name='BestBtn' class='addToProfBtn2'>Избранное</button>";  
+    echo "<button type='submit' name='BestBtn' class='addToProfBtn2'>" . $btn_best . "</button>";
     echo"</form>";
     echo "</div>";
     echo "</nav>";

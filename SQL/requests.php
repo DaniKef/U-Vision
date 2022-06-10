@@ -57,4 +57,21 @@ const SQL_INSERT_TO_WATCHED = "INSERT INTO userWatched(login,nameRU,nameUA,categ
 const SQL_INSERT_TO_BEST = "INSERT INTO userBest(login,nameRU,nameUA,category) VALUES(?,?,?,?);";
 const SQL_SELECT_FROM_WATCHED = "SELECT * FROM userWatched WHERE (nameRU = ? OR nameUA=?) AND login=?;";
 const SQL_SELECT_FROM_BEST = "SELECT * FROM userBest WHERE (nameRU = ? OR nameUA=?) AND login=?;";
+const SQL_DELETE_FROM_WATCHED = "DELETE FROM userWatched WHERE login=? AND (nameRU = ? OR nameUA=?);";
+const SQL_DELETE_FROM_BEST = "DELETE FROM userBest WHERE login=? AND (nameRU = ? OR nameUA=?);";
+
+const SQL_SELECT_FROM_WATCHED_RU = "SELECT nameRU FROM userWatched WHERE login = ?;";
+const SQL_SELECT_FROM_WATCHED_UA = "SELECT nameUA FROM userWatched WHERE login = ?;";
+const SQL_SELECT_FROM_BEST_RU = "SELECT nameRU FROM userBest WHERE login = ?;";
+const SQL_SELECT_FROM_BEST_UA = "SELECT nameUA FROM userBest WHERE login = ?;";
+
+
+
+
+
+
+
+
+
+
  ?>
