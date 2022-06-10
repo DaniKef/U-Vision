@@ -65,11 +65,15 @@ const SQL_SELECT_FROM_WATCHED_UA = "SELECT nameUA FROM userWatched WHERE login =
 const SQL_SELECT_FROM_BEST_RU = "SELECT nameRU FROM userBest WHERE login = ?;";
 const SQL_SELECT_FROM_BEST_UA = "SELECT nameUA FROM userBest WHERE login = ?;";
 
+const SQL_SELECT_BY_ONLY_NAME_FILMS_RU = "SELECT * FROM filmsRU WHERE name = ?;";
+const SQL_SELECT_BY_ONLY_NAME_FILMS_UA = "SELECT * FROM filmsUA WHERE name = ?;";
+const SQL_SELECT_BY_ONLY_NAME_SERIALS_RU = "SELECT * FROM serialsRU WHERE name = ?;";
+const SQL_SELECT_BY_ONLY_NAME_SERIALS_UA = "SELECT * FROM serialsUA WHERE name = ?;";
+const SQL_SELECT_BY_ONLY_NAME_CARTOONS_RU = "SELECT * FROM cartoonsRU WHERE name = ?;";
+const SQL_SELECT_BY_ONLY_NAME_CARTOONS_UA = "SELECT * FROM cartoonsUA WHERE name = ?;";
 
-
-
-
-
+const SQL_SELECT_MAIN_TEXT_RU ="SELECT * FROM mainTextRU;";
+const SQL_SELECT_MAIN_TEXT_UA ="SELECT * FROM mainTextUA;";
 
 
 

@@ -4,7 +4,7 @@ require "php/changeLanguageCoockie.php"; // Проверка при 1 запус
 require "php/pLoadHeader.php"; // Загрузка хэдэра
 require "php/pLoadFooter.php"; // Загрузка футэра
 require "php/pLoadComments.php"; // Загрузка комментариев
-
+require "getVideoByName.php";
 session_start();
 if(!$_SESSION['user'])
 {
@@ -78,6 +78,10 @@ if(!$_SESSION['user'])
 
 
 <script type="text/javascript">
+document.addEventListener('click',e => document.cookie = "toPlayNameRU="+e.target.textContent);
+document.addEventListener('click',e => document.cookie = "toPlayNameUA="+e.target.textContent);
+document.cookie = "whatToPlay=none";
+
 window.onload = function (){
    var k = document.getElementsByTagName("button");
    for(var i = 0; i < k.length; i++)

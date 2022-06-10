@@ -106,6 +106,9 @@ function SQLREQUEST($dbh) // SQL запрос
   elseif ($_COOKIE['whatToPlay']=="serial") {
     $data = SQLSELECTSERIAL($dbh);
   }
+  elseif ($_COOKIE['whatToPlay']=="none") {
+    $data = SQLSELECTEVERYWHERE($dbh);
+  }
   else {
     $data = SQLSELECTCARTOON($dbh);
   }
@@ -290,6 +293,76 @@ function SQLSELECTNAMECARTOONUA($dbh) // Для поиска названия н
     echo $ex->GetMessage();
   }
   return $picture_name;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+function SQLSELECTEVERYWHERE($dbh)
+{
+  $sth = $dbh->prepare(SQL_SELECT_BY_ONLY_NAME_FILMS_RU);
+  $sth->execute([$_COOKIE['toPlayNameRU']]);
+  $dataT = $sth->fetchAll();
+  if(count($dataT) > 0)
+  {
+    SQLSELECTFILM($dbh);
+    $data = $dataT;
+  }
+
+  $sth = $dbh->prepare(SQL_SELECT_BY_ONLY_NAME_FILMS_UA);
+  $sth->execute([$_COOKIE['toPlayNameUA']]);
+  $dataT = $sth->fetchAll();
+  if(count($dataT) > 0)
+  {
+    SQLSELECTFILM($dbh);
+    $data = $dataT;
+  }
+
+  $sth = $dbh->prepare(SQL_SELECT_BY_ONLY_NAME_SERIALS_RU);
+  $sth->execute([$_COOKIE['toPlayNameRU']]);
+  $dataT = $sth->fetchAll();
+  if(count($dataT) > 0)
+  {
+    SQLSELECTSERIAL($dbh);
+    $data = $dataT;
+  }
+
+  $sth = $dbh->prepare(SQL_SELECT_BY_ONLY_NAME_SERIALS_UA);
+  $sth->execute([$_COOKIE['toPlayNameUA']]);
+  $dataT = $sth->fetchAll();
+  if(count($dataT) > 0)
+  {
+    SQLSELECTSERIAL($dbh);
+    $data = $dataT;
+  }
+
+  $sth = $dbh->prepare(SQL_SELECT_BY_ONLY_NAME_CARTOONS_RU);
+  $sth->execute([$_COOKIE['toPlayNameRU']]);
+  $dataT = $sth->fetchAll();
+  if(count($dataT) > 0)
+  {
+    SQLSELECTCARTOON($dbh);
+    $data = $dataT;
+  }
+
+  $sth = $dbh->prepare(SQL_SELECT_BY_ONLY_NAME_CARTOONS_UA);
+  $sth->execute([$_COOKIE['toPlayNameUA']]);
+  $dataT = $sth->fetchAll();
+  if(count($dataT) > 0)
+  {
+    SQLSELECTCARTOON($dbh);
+    $data = $dataT;
+  }
+  return $data;
 }
 
  ?>

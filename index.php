@@ -4,6 +4,7 @@ require "php/changeLanguageCoockie.php"; // Проверка при 1 запус
 require "php/pLoadHeader.php"; // Загрузка хэдэра
 require "php/pLoadFooter.php"; // Загрузка футэра
 require "php/pLoadComments.php"; // Загрузка комментариев
+require "php/loadWelcomeText.php";
  ?>
 
 <!DOCTYPE html>
@@ -34,7 +35,8 @@ require "php/pLoadComments.php"; // Загрузка комментариев
     <main>
       <div class="mainContent">
         <h3 class="bigBegin"><?= $lang->get('H3_TITLE_MAIN');?></h3>
-        <p class="main_text"></p>
+        <a href='http://u-vision.zzz.com.ua/'><div class='header-bg2'></div></a>
+        <?php LoadMainText($dbh); ?>
         <h3 class="bigBegin"><?= $lang->get('MAIN_COMMENTS');?></h3>
       </div>
 
