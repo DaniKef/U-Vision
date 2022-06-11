@@ -25,9 +25,7 @@ session_start();
     <link rel="stylesheet" type="text/css" href="CSS/styleFilms.css">
     <link rel="stylesheet" type="text/css" href="CSS/styleWatch.css">
     <script type="text/javascript">
-    document.addEventListener('click',e => document.cookie = "toPlayNameRU="+e.target.textContent);
-    document.addEventListener('click',e => document.cookie = "toPlayNameUA="+e.target.textContent);
-    document.cookie = "whatToPlay=film";
+
     </script>
   </head>
   <body>
@@ -39,9 +37,9 @@ session_start();
     <main>
       <div class="mainContent">
         <?php
-
         if(isset($_POST['submitSearch']))
         {
+          setcookie("whatToPlay", "none");
           $sth = $dbh->prepare(SQL_SEARCH_FILM_RU);
           $value = $_POST['search'];
           $sth->execute(["%$value%"]);
@@ -131,6 +129,8 @@ function printMovie($dbh,$data,$lang)
   $btn_best = $lang->get('BTN_BEST');
   foreach ($data as $d)
   {
+  setcookie("toPlayNameRU", $d['name']);
+  setcookie("toPlayNameUA", $d['name']);
   echo "<h3 class='bigBegin'>" . $d['name'] . "</h3>";
   echo "<div class='film-content'>";
 
