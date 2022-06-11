@@ -1,6 +1,19 @@
 .pre-film {
   margin-bottom: 10px;
 }
+.divFomSearch {
+  margin-left: 60%;
+  padding-bottom: 30px;
+}
+
+.submitBtn {
+    background: transparent;
+    border: none;
+    color: white;
+}
+.submitBtn:hover {
+  color: #d1d44a;
+}
 
 /*Название мини отдела*/
 .pre-film-name {

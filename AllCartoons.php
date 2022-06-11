@@ -38,6 +38,11 @@ require "SQL/SHOW_RESULT_FILMS.php";
     <main>
       <div class="mainContent">
         <h3 class="bigBegin"><?= $lang->get('H3_TITLE_CARTOONS');?></h3>
+        <div class="divFomSearch">
+          <form action="Searched.php" class="" method="post">
+              <input type="text" name="search" class="search"><input type="submit" class="submitBtn" name="submitSearch" value="Search">
+          </form>
+        </div>
         <div class="pre-films">
             <?php ShowAllFilms(SelectAllCartoons($dbh),$lang); ?>
         </div>

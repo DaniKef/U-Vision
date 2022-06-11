@@ -42,6 +42,11 @@ require "SQL/SHOW_RESULT_FILMS.php";
             <h3 class="bigBegin"><?= $lang->get('H3_TITLE_FILMS');?></h3>
           </div>
         </nav>
+        <div class="divFomSearch">
+          <form action="Searched.php" class="" method="post">
+              <input type="text" name="search" class="search"><input type="submit" class="submitBtn" name="submitSearch" value="Search">
+          </form>
+        </div>
         <div class="pre-films">
             <?php ShowAllFilms(SelectAllFilms($dbh),$lang); ?>
         </div>
