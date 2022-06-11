@@ -33,6 +33,8 @@ if(!$_SESSION['user'])
     <link rel="stylesheet" type="text/css" href="CSS/RegistrationAndProfileStyle.css">
   </head>
   <body>
+    <div class="BG">
+    </div>
 
     <header>
       <?php LoadHeader($lang); ?>

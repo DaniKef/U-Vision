@@ -29,6 +29,8 @@ session_start();
     <link rel="stylesheet" type="text/css" href="CSS/styleWatch.css">
   </head>
   <body>
+    <div class="BG">
+    </div>
 
     <header>
       <?php LoadHeader($lang); ?>

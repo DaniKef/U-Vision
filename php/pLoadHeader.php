@@ -7,7 +7,7 @@ function LoadHeader($lang) // Загрузить хэдэр
   $btn_cartoons = $lang->get('BTN_CARTOONS');
   $h3_account = $lang->get('H3_ACCOUNT');
 
-  echo "<a href='http://u-vision.zzz.com.ua/'><div class='header-bg'></div></a>
+  echo "
   <nav class='nav'>
     <div class='nav_links'>
       <a class='nav__link' href='index.php'>" . $btn_main . "</a>

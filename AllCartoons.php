@@ -30,6 +30,8 @@ require "SQL/SHOW_RESULT_FILMS.php";
     </script>
   </head>
   <body>
+    <div class="BG">
+    </div>
 
     <header>
       <?php LoadHeader($lang); ?>

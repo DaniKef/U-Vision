@@ -29,6 +29,8 @@ session_start();
     </script>
   </head>
   <body>
+    <div class="BG">
+    </div>
 
     <header>
       <?php LoadHeader($lang); ?>

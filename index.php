@@ -22,11 +22,13 @@ require "php/loadWelcomeText.php";
     <link rel="shortcut icon" type="image/x-icon" href="Media/Images/main_Icon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="CSS/styleAll.css">
     <link rel="stylesheet" type="text/css" href="CSS/styleMainPage.css">
   </head>
   <body>
+    <div class="BG">
+    </div>
 
     <header>
       <?php LoadHeader($lang); ?>
