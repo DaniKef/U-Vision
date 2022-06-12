@@ -187,6 +187,10 @@ function SQLSELECTCARTOON($dbh) //SQL запрос сериала
   return $data;
 }
 
+
+
+
+
 function SQLSELECTNAMEFILMRU($dbh) // Для поиска названия на русском по украинскому названию
 {
   $picture_name;
@@ -314,6 +318,7 @@ function SQLSELECTEVERYWHERE($dbh)
   $dataT = $sth->fetchAll();
   if(count($dataT) > 0)
   {
+    setcookie("toPlayNameUA", SQLSELECTNAMEFILMUA($dbh));
     SQLSELECTFILM($dbh);
     $data = $dataT;
   }
@@ -323,6 +328,7 @@ function SQLSELECTEVERYWHERE($dbh)
   $dataT = $sth->fetchAll();
   if(count($dataT) > 0)
   {
+    setcookie("toPlayNameRU", SQLSELECTNAMEFILMRU($dbh));
     SQLSELECTFILM($dbh);
     $data = $dataT;
   }
@@ -332,6 +338,7 @@ function SQLSELECTEVERYWHERE($dbh)
   $dataT = $sth->fetchAll();
   if(count($dataT) > 0)
   {
+    setcookie("toPlayNameUA", SQLSELECTNAMESERIALUA($dbh));
     SQLSELECTSERIAL($dbh);
     $data = $dataT;
   }
@@ -341,6 +348,7 @@ function SQLSELECTEVERYWHERE($dbh)
   $dataT = $sth->fetchAll();
   if(count($dataT) > 0)
   {
+    setcookie("toPlayNameRU", SQLSELECTNAMESERIALRU($dbh));
     SQLSELECTSERIAL($dbh);
     $data = $dataT;
   }
@@ -350,6 +358,7 @@ function SQLSELECTEVERYWHERE($dbh)
   $dataT = $sth->fetchAll();
   if(count($dataT) > 0)
   {
+    setcookie("toPlayNameUA", SQLSELECTNAMECARTOONUA($dbh));
     SQLSELECTCARTOON($dbh);
     $data = $dataT;
   }
@@ -359,6 +368,7 @@ function SQLSELECTEVERYWHERE($dbh)
   $dataT = $sth->fetchAll();
   if(count($dataT) > 0)
   {
+    setcookie("toPlayNameRU", SQLSELECTNAMECARTOONRU($dbh));
     SQLSELECTCARTOON($dbh);
     $data = $dataT;
   }

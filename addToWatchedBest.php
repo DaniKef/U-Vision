@@ -126,7 +126,7 @@ function InsertFByKnowingUAW($dbh)
     $nameUA = $d['name'];
   }
   $sth = $dbh->prepare(SQL_INSERT_TO_WATCHED);
-  $sth->execute([$_SESSION['user']['login'], $_COOKIE['toPlayNameRU'], $nameUA, $_COOKIE['whatToPlay']]);
+  $sth->execute([$_SESSION['user']['login'], $_COOKIE['toPlayNameRU'], $_COOKIE['toPlayNameUA'], $_COOKIE['whatToPlay']]);
 }
 function InsertSByKnowingUAW($dbh)
 {
@@ -138,7 +138,7 @@ function InsertSByKnowingUAW($dbh)
     $nameUA = $d['name'];
   }
   $sth = $dbh->prepare(SQL_INSERT_TO_WATCHED);
-  $sth->execute([$_SESSION['user']['login'], $_COOKIE['toPlayNameRU'], $nameUA, $_COOKIE['whatToPlay']]);
+  $sth->execute([$_SESSION['user']['login'], $_COOKIE['toPlayNameRU'], $_COOKIE['toPlayNameUA'], $_COOKIE['whatToPlay']]);
 }
 function InsertCByKnowingUAW($dbh)
 {
@@ -150,7 +150,7 @@ function InsertCByKnowingUAW($dbh)
     $nameUA = $d['name'];
   }
   $sth = $dbh->prepare(SQL_INSERT_TO_WATCHED);
-  $sth->execute([$_SESSION['user']['login'], $_COOKIE['toPlayNameRU'], $nameUA, $_COOKIE['whatToPlay']]);
+  $sth->execute([$_SESSION['user']['login'], $_COOKIE['toPlayNameRU'], $_COOKIE['toPlayNameUA'], $_COOKIE['whatToPlay']]);
 }
 
 
@@ -166,7 +166,7 @@ function InsertFByKnowingRUW($dbh)
     $nameRU = $d['name'];
   }
   $sth = $dbh->prepare(SQL_INSERT_TO_WATCHED);
-  $sth->execute([$_SESSION['user']['login'], $nameRU, $_COOKIE['toPlayNameUA'], $_COOKIE['whatToPlay']]);
+  $sth->execute([$_SESSION['user']['login'], $_COOKIE['toPlayNameRU'], $_COOKIE['toPlayNameUA'], $_COOKIE['whatToPlay']]);
 }
 function InsertSByKnowingRUW($dbh)
 {
@@ -178,7 +178,7 @@ function InsertSByKnowingRUW($dbh)
     $nameRU = $d['name'];
   }
   $sth = $dbh->prepare(SQL_INSERT_TO_WATCHED);
-  $sth->execute([$_SESSION['user']['login'], $nameRU, $_COOKIE['toPlayNameUA'], $_COOKIE['whatToPlay']]);
+  $sth->execute([$_SESSION['user']['login'], $_COOKIE['toPlayNameRU'], $_COOKIE['toPlayNameUA'], $_COOKIE['whatToPlay']]);
 }
 function InsertCByKnowingRUW($dbh)
 {
@@ -190,7 +190,7 @@ function InsertCByKnowingRUW($dbh)
     $nameRU = $d['name'];
   }
   $sth = $dbh->prepare(SQL_INSERT_TO_WATCHED);
-  $sth->execute([$_SESSION['user']['login'], $nameRU, $_COOKIE['toPlayNameUA'], $_COOKIE['whatToPlay']]);
+  $sth->execute([$_SESSION['user']['login'], $_COOKIE['toPlayNameRU'], $_COOKIE['toPlayNameUA'], $_COOKIE['whatToPlay']]);
 }
 
 
@@ -220,7 +220,7 @@ function InsertFByKnowingUAB($dbh)
     $nameUA = $d['name'];
   }
   $sth = $dbh->prepare(SQL_INSERT_TO_BEST);
-  $sth->execute([$_SESSION['user']['login'], $_COOKIE['toPlayNameRU'], $nameUA, $_COOKIE['whatToPlay']]);
+  $sth->execute([$_SESSION['user']['login'], $_COOKIE['toPlayNameRU'], $_COOKIE['toPlayNameUA'], $_COOKIE['whatToPlay']]);
 }
 function InsertSByKnowingUAB($dbh)
 {
@@ -232,7 +232,7 @@ function InsertSByKnowingUAB($dbh)
     $nameUA = $d['name'];
   }
   $sth = $dbh->prepare(SQL_INSERT_TO_BEST);
-  $sth->execute([$_SESSION['user']['login'], $_COOKIE['toPlayNameRU'], $nameUA, $_COOKIE['whatToPlay']]);
+  $sth->execute([$_SESSION['user']['login'], $_COOKIE['toPlayNameRU'], $_COOKIE['toPlayNameUA'], $_COOKIE['whatToPlay']]);
 }
 function InsertCByKnowingUAB($dbh)
 {
@@ -244,7 +244,7 @@ function InsertCByKnowingUAB($dbh)
     $nameUA = $d['name'];
   }
   $sth = $dbh->prepare(SQL_INSERT_TO_BEST);
-  $sth->execute([$_SESSION['user']['login'], $_COOKIE['toPlayNameRU'], $nameUA, $_COOKIE['whatToPlay']]);
+  $sth->execute([$_SESSION['user']['login'], $_COOKIE['toPlayNameRU'], $_COOKIE['toPlayNameUA'], $_COOKIE['whatToPlay']]);
 }
 
 
@@ -260,7 +260,7 @@ function InsertFByKnowingRUB($dbh)
     $nameRU = $d['name'];
   }
   $sth = $dbh->prepare(SQL_INSERT_TO_BEST);
-  $sth->execute([$_SESSION['user']['login'], $nameRU, $_COOKIE['toPlayNameUA'], $_COOKIE['whatToPlay']]);
+  $sth->execute([$_SESSION['user']['login'], $_COOKIE['toPlayNameRU'], $_COOKIE['toPlayNameUA'], $_COOKIE['whatToPlay']]);
 }
 function InsertSByKnowingRUB($dbh)
 {
@@ -272,7 +272,7 @@ function InsertSByKnowingRUB($dbh)
     $nameRU = $d['name'];
   }
   $sth = $dbh->prepare(SQL_INSERT_TO_BEST);
-  $sth->execute([$_SESSION['user']['login'], $nameRU, $_COOKIE['toPlayNameUA'], $_COOKIE['whatToPlay']]);
+  $sth->execute([$_SESSION['user']['login'], $_COOKIE['toPlayNameRU'], $_COOKIE['toPlayNameUA'], $_COOKIE['whatToPlay']]);
 }
 function InsertCByKnowingRUB($dbh)
 {
@@ -284,7 +284,7 @@ function InsertCByKnowingRUB($dbh)
     $nameRU = $d['name'];
   }
   $sth = $dbh->prepare(SQL_INSERT_TO_BEST);
-  $sth->execute([$_SESSION['user']['login'], $nameRU, $_COOKIE['toPlayNameUA'], $_COOKIE['whatToPlay']]);
+  $sth->execute([$_SESSION['user']['login'], $_COOKIE['toPlayNameRU'], $_COOKIE['toPlayNameUA'], $_COOKIE['whatToPlay']]);
 }
 
 
